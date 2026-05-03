@@ -51,8 +51,11 @@ The API provides real nutritional information for thousands of foods.
 - USDA FoodData Central API
 
 ---
-📦 Project structure
+## 📂 Project structure
 
+```text
+repo/
+│
 ├── index.html
 ├── history.html
 ├── stats.html
@@ -63,7 +66,6 @@ The API provides real nutritional information for thousands of foods.
 │
 └── js/
     └── functions.js
-
 ## ⚙️ Setup
 
 1. Clone repository:git clone https://github.com/Jree-byte/Calorie-counter-web-app
