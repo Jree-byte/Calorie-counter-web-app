@@ -51,20 +51,9 @@ The API provides real nutritional information for thousands of foods.
 - USDA FoodData Central API
 
 ---
+📂 Project structure
 
-## 📂 Project structure
-repo/
-│
-├── index.html
-├── history.html
-├── stats.html
-├── README.md
-│
-├── css/
-│   └── style.css
-│
-└── js/
-    └── functions.js
+repo/ │ ├── index.html ├── history.html ├── stats.html ├── README.md │ ├── css/ │ └── style.css │ └── js/ └── functions.js
 
 ## ⚙️ Setup
 
