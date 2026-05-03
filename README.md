@@ -63,7 +63,7 @@ README.md
 
 ## ⚙️ Setup
 
-1. Clone repository:git clone https://github.com/your-username/calorie-counter.git
+1. Clone repository:git clone https://github.com/Jree-byte/Calorie-counter-web-app
 Open index.html in browser
 Or deploy using GitHub Pages
 🔑 API Key Note
@@ -75,7 +75,7 @@ Key is used in functions.js
 In production, it should be stored in a backend or environment variable
 🌍 Live demo
 
-👉 https://Jree-byte.github.io/calorie-counter/
+👉 https://Jree-byte.github.io/Calorie-counter-web-app/
 
 📊 Future improvements
 📈 Graphs for macronutrients (Chart.js)
