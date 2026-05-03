@@ -53,13 +53,18 @@ The API provides real nutritional information for thousands of foods.
 ---
 
 ## 📂 Project structure
-/index.html
-/history.html
-/stats.html
-/css/style.css
-/js/functions.js
-README.md
----
+repo/
+│
+├── index.html
+├── history.html
+├── stats.html
+├── README.md
+│
+├── css/
+│   └── style.css
+│
+└── js/
+    └── functions.js
 
 ## ⚙️ Setup
 
