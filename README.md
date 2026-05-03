@@ -66,6 +66,7 @@ repo/
 │
 └── js/
     └── functions.js
+```
 ## ⚙️ Setup
 
 1. Clone repository:git clone https://github.com/Jree-byte/Calorie-counter-web-app
