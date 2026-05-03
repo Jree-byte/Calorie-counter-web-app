@@ -2,34 +2,34 @@
 <html lang="fi">
 <head>
   <meta charset="UTF-8">
-  <title>Kalorilaskuri</title>
+  <title>Calorie Counter</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <nav>
-  <a href="index.html">Lisää</a>
-  <a href="history.html">Historia</a>
-  <a href="stats.html">Tilastot</a>
+  <a href="index.html">Add</a>
+  <a href="history.html">History</a>
+  <a href="stats.html">Stats</a>
 </nav>
 
 <div class="container">
-  <h2>Hae ruoka</h2>
+  <h2>Search Food</h2>
 
   <input
     id="search"
     type="text"
-    placeholder="esim. banana, rice"
+    placeholder="e.g., banana, rice"
   >
 
   <input
     id="amount"
     type="number"
-    placeholder="grammaa"
+    placeholder="grams"
   >
 
   <button onclick="searchFood()">
-    Hae
+    Search
   </button>
 
   <div id="results"></div>

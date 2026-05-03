@@ -2,7 +2,7 @@
 let items = JSON.parse(localStorage.getItem("items")) || [];
 
 /* =========================
-   TALLENNUS
+   SAVE ITEMS
 ========================= */
 
 function saveItems() {
@@ -10,7 +10,7 @@ function saveItems() {
 }
 
 /* =========================
-   RUOAN HAKU APISTA
+   SEARCH FOOD FROM API
 ========================= */
 const API_KEY = "YOUR API KEY HERE";
 
@@ -19,24 +19,24 @@ async function searchFood() {
   const resultsDiv = document.getElementById("results");
 
   if (!query) {
-    alert("Kirjoita haettava ruoka");
+    alert("Search food by name");
     return;
   }
 
-  resultsDiv.innerHTML = "<p>Ladataan...</p>";
+  resultsDiv.innerHTML = "<p>Loading...</p>";
 
   try {
     const res = await fetch(
       `https://api.nal.usda.gov/fdc/v1/foods/search?query=${encodeURIComponent(query)}&pageSize=5&api_key=${API_KEY}`
     );
 
-    if (!res.ok) throw new Error("API virhe");
+    if (!res.ok) throw new Error("API error");
 
     const data = await res.json();
     resultsDiv.innerHTML = "";
 
     if (!data.foods || data.foods.length === 0) {
-      resultsDiv.innerHTML = "<p>Ei tuloksia</p>";
+      resultsDiv.innerHTML = "<p>No results found</p>";
       return;
     }
 
@@ -93,20 +93,20 @@ Lisää
     });
 
   } catch (err) {
-    resultsDiv.innerHTML = "<p>Virhe haussa</p>";
+    resultsDiv.innerHTML = "<p>Error searching for food</p>";
     console.error(err);
   }
 }
 
 /* =========================
-   RUOAN LISÄYS
+   ADD FOOD
 ========================= */
 
 function addFood(name, kcalPer100g, protein, carbs, fat, fiber) {
   const amount = parseFloat(document.getElementById("amount").value);
 
   if (!amount || amount <= 0) {
-    alert("Anna määrä");
+    alert("Please enter an amount");
     return;
   }
 
@@ -124,11 +124,11 @@ function addFood(name, kcalPer100g, protein, carbs, fat, fiber) {
   });
 
   saveItems();
-  alert("Lisätty!");
+  alert("Added!");
 }
 
 /* =========================
-   HISTORIA-SIVU
+   HISTORY PAGE
 ========================= */
 
 function renderHistory() {
@@ -164,7 +164,7 @@ function removeItem(index) {
 }
 
 /* =========================
-   TILASTOT-SIVU
+   STATS-PAGE
 ========================= */
 
 function renderStats() {
@@ -205,18 +205,18 @@ function renderStats() {
   const goal = 2000;
 
   // kcal
-  totalEl.textContent = "Yhteensä: " + total.toFixed(0) + " kcal";
-  avgEl.textContent = "Keskiarvo: " + avg.toFixed(0) + " kcal";
-  maxEl.textContent = max ? "Suurin annos: " + max.name : "Ei dataa";
+  totalEl.textContent = "Total: " + total.toFixed(0) + " kcal";
+  avgEl.textContent = "Average: " + avg.toFixed(0) + " kcal";
+  maxEl.textContent = max ? "Largest serving: " + max.name : "No data";
 
   goalEl.textContent =
     total > goal
-      ? "Tavoite ylitetty (" + goal + " kcal)"
-      : "Jäljellä: " + (goal - total).toFixed(0) + " kcal";
+      ? "Goal exceeded (" + goal + " kcal)"
+      : "Remaining: " + (goal - total).toFixed(0) + " kcal";
 
-  // ravinteet
-  proteinEl.textContent = "Proteiini: " + proteinTotal.toFixed(1) + " g";
-  carbsEl.textContent = " Hiilihydraatit: " + carbsTotal.toFixed(1) + " g";
-  fatEl.textContent = " Rasva: " + fatTotal.toFixed(1) + " g";
-  fiberEl.textContent = " Kuitu: " + fiberTotal.toFixed(1) + " g";
+  // nutrients
+  proteinEl.textContent = "Protein: " + proteinTotal.toFixed(1) + " g";
+  carbsEl.textContent = "Carbohydrates: " + carbsTotal.toFixed(1) + " g";
+  fatEl.textContent = "Fat: " + fatTotal.toFixed(1) + " g";
+  fiberEl.textContent = "Fiber: " + fiberTotal.toFixed(1) + " g";
 }
