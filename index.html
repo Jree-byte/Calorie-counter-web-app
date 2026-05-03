@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalorilaskuri</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Lisää</a>
+  <a href="history.html">Historia</a>
+  <a href="stats.html">Tilastot</a>
+</nav>
+
+<div class="container">
+  <h2>Hae ruoka</h2>
+
+  <input
+    id="search"
+    type="text"
+    placeholder="esim. banana, rice"
+  >
+
+  <input
+    id="amount"
+    type="number"
+    placeholder="grammaa"
+  >
+
+  <button onclick="searchFood()">
+    Hae
+  </button>
+
+  <div id="results"></div>
+</div>
+
+<script src="js/functions.js"></script>
+</body>
+</html>
