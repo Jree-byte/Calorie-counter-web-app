@@ -75,6 +75,8 @@ repo/
 1. Clone repository:git clone https://github.com/Jree-byte/Calorie-counter-web-app
 Open index.html in browser
 Or deploy using GitHub Pages
+
+
 🔑 API Key Note
 
 This project uses the USDA API.
