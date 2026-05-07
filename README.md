@@ -65,7 +65,10 @@ repo/
 │   └── style.css
 │
 └── js/
-    └── functions.js
+    ├── main.js
+    ├── history.js
+    ├── stats.js
+    └── storage.js
 ```
 ## ⚙️ Setup
 
